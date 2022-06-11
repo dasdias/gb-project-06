@@ -169,3 +169,44 @@ img {
     border: none;
     border-bottom: 2px solid #fafafa;
 }
+/* error */
+
+.error-wrap {
+  visibility: hidden;
+  transform: scale(0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.775);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  min-width: 300px;
+  min-height: 200px;
+  border-radius: 3px
+}
+.error__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 120px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.error-wrap_active {
+  visibility: visible;
+  transform: scale(1);
+}
