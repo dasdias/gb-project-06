@@ -11,6 +11,7 @@
     <header>
         <div class="logo">E-shop</div>
         <div class="cart">
+          <search-form></search-form>
 <!--
             <form action="#" class="search-form" @submit.prevent="filter">
                 <input type="text" class="search-field" v-model="userSearch">
@@ -21,8 +22,6 @@
 -->
             <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
             
-       
-            
             <cart :cart-items="cartItems"
             :img="imgCart"
             :visibility="showCart"></cart>
@@ -30,14 +29,18 @@
         </div>
         
     </header>
+
+    <error-connect v-if="error"></error-connect>
     <main>
         <products :products="filtered" :img="imgProduct" @add-product="addProduct"></products>
     </main>
 </div>
     <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/ProductComponent.js"></script>
-<script src="js/CartComponent.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/searchForm.js"></script>
+    <script src="js/errorConnect.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
